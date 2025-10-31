@@ -91,9 +91,10 @@ frames = [
             """
 ]
     # ANSI Escape Codes for coloring terminal output
-RED = '\033[91m'   # Bright Red
+RED = '\033[91m' 
+END=  '\033[0m'# Bright Red
 import random
 while True:  
     os.system('cls' if os.name == 'nt' else 'clear')  # clear console
-    print(RED+frames[random.randint(0, len(frames)-1)])  # cycle through frames
+    print(RED+frames[random.randint(0, len(frames)-1)]+END)  # cycle through frames
     time.sleep(0.3)
